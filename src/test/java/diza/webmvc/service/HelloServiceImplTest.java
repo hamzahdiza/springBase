@@ -15,6 +15,6 @@ class HelloServiceImplTest {
     @Test
     void hello() {
         assertEquals("Hello Guest", helloService.hello(null));
-        assertEquals("Hello Eko", helloService.hello("Eko"));
+        assertEquals("Hello Hamzah", helloService.hello("Hamzah"));
     }
 }

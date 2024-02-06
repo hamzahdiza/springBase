@@ -27,11 +27,11 @@ public class HelloControllerIntegrationTest {
     }
 
     @Test
-    void helloEko() {
+    void helloHamzah() {
         ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:" + port + "/hello?name=Hamzah", String.class);
         String response = responseEntity.getBody();
 
         Assertions.assertNotNull(response);
-        Assertions.assertEquals("Hello Eko", response.trim());
+        Assertions.assertEquals("Hello Hamzah", response.trim());
     }
 }
