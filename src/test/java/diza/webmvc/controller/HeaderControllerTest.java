@@ -24,7 +24,7 @@ class HeaderControllerTest {
     void headerOk() throws Exception {
         mockMvc.perform(
                 get("/header/token")
-                        .header("X-TOKEN", "EKO")
+                        .header("X-TOKEN", "HAMZAH")
         ).andExpectAll(
                 status().isOk(),
                 content().string(Matchers.containsString("OK"))

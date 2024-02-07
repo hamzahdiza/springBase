@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import java.util.List;
 
 @Controller
-public class PersonController {
+public class  PersonController {
 
     @PostMapping(path = "/person", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
     @ResponseBody

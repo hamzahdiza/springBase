@@ -27,12 +27,12 @@ class FormControllerTest {
         mockMvc.perform(
                 post("/form/person")
                         .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                        .param("name", "Eko")
+                        .param("name", "Hamzah")
                         .param("birthDate", "1990-10-10")
                         .param("address", "Indonesia")
         ).andExpectAll(
                 status().isOk(),
-                content().string(Matchers.containsString("Success create Person with name : Eko, " +
+                content().string(Matchers.containsString("Success create Person with name : Hamzah, " +
                         "birthDate : 1990-10-10, " +
                         "address : Indonesia"))
         );
@@ -43,11 +43,11 @@ class FormControllerTest {
         mockMvc.perform(
                 post("/form/hello")
                         .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                        .param("name", "Eko")
+                        .param("name", "Hamzah")
         ).andExpectAll(
                 status().isOk(),
                 header().string(HttpHeaders.CONTENT_TYPE, Matchers.containsString(MediaType.TEXT_HTML_VALUE)),
-                content().string(Matchers.containsString("Hello Eko"))
+                content().string(Matchers.containsString("Hello Hamzah"))
         );
     }
 }

@@ -25,7 +25,6 @@ public class FormController {
                 ", birthDate : " + dateFormat.format(birthDate) +
                 ", address : " + address;
     }
-
     @PostMapping(
             path = "/form/hello",
             consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE,

@@ -11,7 +11,7 @@ public class HeaderController {
     @GetMapping(path = "/header/token")
     @ResponseBody
     public String header(@RequestHeader(name = "X-TOKEN") String token) {
-        if ("EKO".equals(token)) {
+        if ("HAMZAH".equals(token)) {
             return "OK";
         } else {
             return "KO";

@@ -31,10 +31,10 @@ class UploadControllerTest {
                         .file(new MockMultipartFile("profile", "profile.png", "image/png",
                                 getClass().getResourceAsStream("/images/profile.png")))
                         .contentType(MediaType.MULTIPART_FORM_DATA)
-                        .param("name", "Eko")
+                        .param("name", "Hamzah")
         ).andExpectAll(
                 status().isOk(),
-                content().string(Matchers.containsString("Success save profile Eko to upload/profile.png"))
+                content().string(Matchers.containsString("Success save profile Hamzah to upload/profile.png"))
         );
     }
 }
